@@ -23,9 +23,16 @@ elif choice == '2':
         print(f"{search_vehicle} is an authorized vehicle.")
     else:
         print(f"{search_vehicle} is not an authorized vehicle.")
+elif choice == '3':
+# Option 3: Add a new authorized vehicle
+            new_vehicle = input("Enter the name of the vehicle to add: ").strip()
+            if new_vehicle not in AllowedVehiclesList:
+                AllowedVehiclesList.append(new_vehicle)
+                print(f"{new_vehicle} has been added to the list of authorized vehicles.")
+            else:
+                print(f"{new_vehicle} is already in the list of authorized vehicles.")
 elif choice == '4':
     print("Exiting the program. Goodbye!")
-    
 # Main program execution
 if __name__ == "__main__":
     display_menu()
